@@ -10,6 +10,11 @@
 		2A850D5D2443D06C257BCE21 /* Pods_AppStoreTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F60FED07498D4A42BF885B7 /* Pods_AppStoreTest.framework */; };
 		CB2A2CA6226B235200EF8C8E /* SocialApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A2CA5226B235200EF8C8E /* SocialApp.swift */; };
 		CB2A2CAA226B382800EF8C8E /* HorizontalSnappingCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A2CA9226B382800EF8C8E /* HorizontalSnappingCVC.swift */; };
+		CB2A2CAD226B873800EF8C8E /* TodayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A2CAC226B873800EF8C8E /* TodayController.swift */; };
+		CB2A2CAF226B945F00EF8C8E /* TodayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB2A2CAE226B945F00EF8C8E /* TodayCell.swift */; };
+		CB7AC2B9226C60050028369D /* AppFullScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7AC2B8226C60050028369D /* AppFullScreenController.swift */; };
+		CB7AC2BB226C685A0028369D /* AppFullScreenDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7AC2BA226C685A0028369D /* AppFullScreenDescriptionCell.swift */; };
+		CB7AC2BF226CBA920028369D /* AppFullScreenHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7AC2BE226CBA920028369D /* AppFullScreenHeaderCell.swift */; };
 		CB7D941E2269DC21007CB7FD /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D941D2269DC21007CB7FD /* AppsHorizontalController.swift */; };
 		CB7D94202269E281007CB7FD /* AppsRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D941F2269E281007CB7FD /* AppsRowCell.swift */; };
 		CB7D94222269F6B3007CB7FD /* AppsHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB7D94212269F6B3007CB7FD /* AppsHeader.swift */; };
@@ -35,6 +40,11 @@
 		5F60FED07498D4A42BF885B7 /* Pods_AppStoreTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppStoreTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB2A2CA5226B235200EF8C8E /* SocialApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialApp.swift; sourceTree = "<group>"; };
 		CB2A2CA9226B382800EF8C8E /* HorizontalSnappingCVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalSnappingCVC.swift; sourceTree = "<group>"; };
+		CB2A2CAC226B873800EF8C8E /* TodayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayController.swift; sourceTree = "<group>"; };
+		CB2A2CAE226B945F00EF8C8E /* TodayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayCell.swift; sourceTree = "<group>"; };
+		CB7AC2B8226C60050028369D /* AppFullScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenController.swift; sourceTree = "<group>"; };
+		CB7AC2BA226C685A0028369D /* AppFullScreenDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenDescriptionCell.swift; sourceTree = "<group>"; };
+		CB7AC2BE226CBA920028369D /* AppFullScreenHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFullScreenHeaderCell.swift; sourceTree = "<group>"; };
 		CB7D941D2269DC21007CB7FD /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 		CB7D941F2269E281007CB7FD /* AppsRowCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsRowCell.swift; sourceTree = "<group>"; };
 		CB7D94212269F6B3007CB7FD /* AppsHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHeader.swift; sourceTree = "<group>"; };
@@ -94,6 +104,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		CB2A2CAB226B871F00EF8C8E /* Today */ = {
+			isa = PBXGroup;
+			children = (
+				CB2A2CAC226B873800EF8C8E /* TodayController.swift */,
+				CB7AC2B8226C60050028369D /* AppFullScreenController.swift */,
+			);
+			path = Today;
+			sourceTree = "<group>";
+		};
 		CBA27533226271F000614A36 /* Apps */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,6 +170,7 @@
 		CBA7D8F0225929F000DF1559 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				CB2A2CAB226B871F00EF8C8E /* Today */,
 				CBA275362262754F00614A36 /* Search */,
 				CBA27533226271F000614A36 /* Apps */,
 				CBA7D8EE225922BE00DF1559 /* BaseTabBarController.swift */,
@@ -166,6 +186,9 @@
 				CBA27537226363DE00614A36 /* AppsGroupCell.swift */,
 				CB7D941F2269E281007CB7FD /* AppsRowCell.swift */,
 				CB7D94252269FC3C007CB7FD /* AppsHeaderCell.swift */,
+				CB2A2CAE226B945F00EF8C8E /* TodayCell.swift */,
+				CB7AC2BA226C685A0028369D /* AppFullScreenDescriptionCell.swift */,
+				CB7AC2BE226CBA920028369D /* AppFullScreenHeaderCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -315,19 +338,24 @@
 				CBA7D8DF225906EA00DF1559 /* ViewController.swift in Sources */,
 				CB7D94242269F7FA007CB7FD /* AppsHeaderHorizontalController.swift in Sources */,
 				CB7D94202269E281007CB7FD /* AppsRowCell.swift in Sources */,
+				CB7AC2B9226C60050028369D /* AppFullScreenController.swift in Sources */,
 				CB2A2CAA226B382800EF8C8E /* HorizontalSnappingCVC.swift in Sources */,
 				CBA27538226363DE00614A36 /* AppsGroupCell.swift in Sources */,
 				CBA7D8FB225A8A5B00DF1559 /* Service.swift in Sources */,
 				CB2A2CA6226B235200EF8C8E /* SocialApp.swift in Sources */,
 				CBA7D8DD225906EA00DF1559 /* AppDelegate.swift in Sources */,
 				CBA7D8EF225922BE00DF1559 /* BaseTabBarController.swift in Sources */,
+				CB7AC2BB226C685A0028369D /* AppFullScreenDescriptionCell.swift in Sources */,
 				CB7D94262269FC3C007CB7FD /* AppsHeaderCell.swift in Sources */,
 				CB7D941E2269DC21007CB7FD /* AppsHorizontalController.swift in Sources */,
+				CB2A2CAF226B945F00EF8C8E /* TodayCell.swift in Sources */,
 				CB7D9428226A14D2007CB7FD /* AppGroup.swift in Sources */,
 				CBA7D8F222592A1600DF1559 /* SearchController.swift in Sources */,
 				CBA7D8F8225A860700DF1559 /* SearchResult.swift in Sources */,
 				CBA7D8F52259659D00DF1559 /* SearchResultCell.swift in Sources */,
+				CB7AC2BF226CBA920028369D /* AppFullScreenHeaderCell.swift in Sources */,
 				CBA275352262720D00614A36 /* AppsController.swift in Sources */,
+				CB2A2CAD226B873800EF8C8E /* TodayController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ class AppsController: UICollectionViewController {
     let headerIdentifier = "headerIdentifier"
     var groups: [AppGroup]?
     var socialApps: [SocialApp]?
+    let refreshController = UIRefreshControl()
 
     // MARK:- Init
     init() {
@@ -30,6 +31,9 @@ class AppsController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        refreshController.addTarget(self, action: #selector(handleRefreshAction), for: .valueChanged)
+
+        collectionView.refreshControl = refreshController
         collectionView.backgroundColor = .white
         collectionView.register(AppsHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifier)
         collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: cellIdentifier)
@@ -41,14 +45,13 @@ class AppsController: UICollectionViewController {
             make.leading.top.trailing.bottom.equalToSuperview()
         }
 
+        activityIndicator.startAnimating()
         fetchData()
     }
 
     // MARK:- Operations
     private func fetchData() {
         let dispatchGroup = DispatchGroup()
-
-        activityIndicator.startAnimating()
 
         dispatchGroup.enter()
         dispatchGroup.enter()
@@ -82,6 +85,7 @@ class AppsController: UICollectionViewController {
         dispatchGroup.notify(queue: .main) { [weak self] in
             self?.collectionView.reloadData()
             self?.activityIndicator.stopAnimating()
+            self?.refreshController.endRefreshing()
         }
     }
 
@@ -106,6 +110,11 @@ class AppsController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! AppsGroupCell
         cell.feed = groups?[indexPath.item].feed
         return cell
+    }
+
+    // MARK:- Objc
+    @objc func handleRefreshAction() {
+        fetchData()
     }
 
     // MARK:- Components

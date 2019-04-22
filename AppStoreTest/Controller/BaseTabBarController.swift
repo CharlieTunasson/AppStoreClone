@@ -13,9 +13,9 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
 
         viewControllers = [
+            navigationController(with: todayVC, title: "Today", tabBarImage: #imageLiteral(resourceName: "today_icon")),
             navigationController(with: appsVC, title: "Apps", tabBarImage: #imageLiteral(resourceName: "apps")),
-            navigationController(with: searchVC, title: "Search", tabBarImage: #imageLiteral(resourceName: "search")),
-            navigationController(with: todayVC, title: "Today", tabBarImage: #imageLiteral(resourceName: "today_icon"))
+            navigationController(with: searchVC, title: "Search", tabBarImage: #imageLiteral(resourceName: "search"))
         ]
     }
 
@@ -29,7 +29,7 @@ class BaseTabBarController: UITabBarController {
     }
 
     // MARK:- Components
-    let todayVC = UIViewController()
+    let todayVC = TodayController()
     let appsVC = AppsController()
     let searchVC = SearchController()
 }
